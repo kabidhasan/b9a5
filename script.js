@@ -3,7 +3,7 @@ console.log(a1);
 let selectedSeats = [];
 
 function selected(seat) {
-  if (!selectedSeats.includes(seat)) {
+  if (!selectedSeats.includes(seat) && selectedSeats.length < 4) {
     seat.classList.remove("bg-[#F7F8F8]");
     seat.classList.add("bg-[#1DD100]");
     seat.classList.remove("text-[#03071280]");
