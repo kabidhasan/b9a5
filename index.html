@@ -9,10 +9,21 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .inter {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body class="w-4/5 mx-auto text-[#030712]">
-    <header>
+  <body class="text-[#030712]" style="font-family: 'Raleway', sans-serif">
+    <header class="w-4/5 mx-auto">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -42,7 +53,7 @@
               <li><a>Search</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-4xl font-extrabold ">P-Ticket</a>
+          <a class="btn btn-ghost text-4xl font-extrabold">P-Ticket</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -55,13 +66,14 @@
         <div class="navbar-end">
           <a
             class="btn bg-[#1DD1001A] flex-row items-center gap-2 border-[#1DD10066] font-bold px-8"
-            ><span class="text-[#1DD100] font-bold text-xl">Bus</span> <img src="images/bus-icon.png" alt="" class="pt-1"
+            ><span class="text-[#1DD100] font-bold text-xl">Bus</span>
+            <img src="images/bus-icon.png" alt="" class="pt-1"
           /></a>
         </div>
       </div>
     </header>
     <main>
-      <section class="hero-section mt-10">
+      <section class="w-4/5 mx-auto hero-section mt-10 mb-[120px]">
         <div
           class="hero min-h-[550px] rounded-3xl"
           style="background-image: url(images/banner.png)"
@@ -73,18 +85,108 @@
                 End-to-End Travel with <br />
                 <span class="text-[#1DD100]">P Paribahan</span>
               </h1>
-              <p class="mb-5">
+              <p class="mb-5 inter">
                 Welcome to our bus service where every journey is a blend of
                 comfort, safety, and convenience. Whether you're commuting to
                 work or embarking on a cross-country adventure, our fleet
                 ensures a smooth ride. "
               </p>
-              <button class="btn bg-[#1DD100] font-bold border-0 text-xl px-5">Buy Tickets</button>
+              <button class="btn bg-[#1DD100] font-bold border-0 text-xl px-5">
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-4/5 mx-auto coupon mb-[120px]">
+        <h1 class="coupon-title text-center font-bold text-3xl">
+          Best offers for you
+        </h1>
+        <div class="coupon-container flex flex-1 gap-6 mt-12 mb-16">
+          <div class="coupon w-full rounded-3xl flex flex-row items-center">
+            <div
+              class="detail w-7/12 h-[220px] bg-[#FFBF0F] rounded-tl-3xl rounded-bl-3xl"
+              style="font-family: 'Inter', sans-serif"
+            >
+              <div
+                class="detail-container flex flex-col justify-center items-center py-[50px]"
+              >
+                <div class="text-4xl font-black text-[#030712CC]">15% OFF</div>
+                <div class="text-[#030712CC] text-xl font-semibold">
+                  on your next purchase
+                </div>
+                <div class="text-[#03071280] text-lg font-medium">
+                  use by January 2024
+                </div>
+              </div>
+            </div>
+            <div
+              class="rong-dhong w-1/12 flex flex-col justify-between flex-1 bg-[#FFBF0F]"
+            >
+              <div
+                class="bg-white h-[30px] rounded-bl-full rounded-br-full"
+              ></div>
+              <div class="h-[160px] flex flex-row py-2">
+                <div class="border-dashed border-white w-1/2 border-r-2"></div>
+                <div class="w-1/2"></div>
+              </div>
+              <div
+                class="bg-white h-[30px] rounded-tl-full rounded-tr-full"
+              ></div>
+            </div>
+            <div
+              class="code w-4/12 bg-[#FFBF0F] h-[220px] flex flex-col items-center justify-center rounded-tr-3xl rounded-br-3xl"
+            >
+              <div class="code font-bold text-3xl">NEW15</div>
+              <div class="subtitle text-xl font-medium text-[#03071266]">
+                Coupon Code
+              </div>
+            </div>
+          </div>
+          <div class="coupon w-full rounded-3xl flex flex-row items-center">
+            <div
+              class="detail w-7/12 h-[220px] bg-[#F78C9C] rounded-tl-3xl rounded-bl-3xl"
+              style="font-family: 'Inter', sans-serif"
+            >
+              <div
+                class="detail-container flex flex-col justify-center items-center py-[50px]"
+              >
+                <div class="text-4xl font-black text-[#030712CC]">20% OFF</div>
+                <div class="text-[#030712CC] text-xl font-semibold">
+                  on your next purchase
+                </div>
+                <div class="text-[#03071280] text-lg font-medium">
+                  use by January 2024
+                </div>
+              </div>
+            </div>
+            <div
+              class="rong-dhong w-1/12 flex flex-col justify-between flex-1 bg-[#F78C9C]"
+            >
+              <div
+                class="bg-white h-[30px] rounded-bl-full rounded-br-full"
+              ></div>
+              <div class="h-[160px] flex flex-row py-2">
+                <div class="border-dashed border-white w-1/2 border-r-2"></div>
+                <div class="w-1/2"></div>
+              </div>
+              <div
+                class="bg-white h-[30px] rounded-tl-full rounded-tr-full"
+              ></div>
+            </div>
+            <div
+              class="code w-4/12 bg-[#F78C9C] h-[220px] flex flex-col items-center justify-center rounded-tr-3xl rounded-br-3xl"
+            >
+              <div class="code font-bold text-3xl">Couple 20</div>
+              <div class="subtitle text-xl font-medium text-[#03071266]">
+                Coupon Code
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class=""></footer>
   </body>
 </html>
