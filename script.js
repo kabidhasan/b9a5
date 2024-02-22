@@ -5,6 +5,9 @@ let noOfTakenSeats = 0;
 validCoupons = ["NEW15", "Couple 20"];
 let discountFactor = 1;
 function selected(seat) {
+  if (selectedSeats.length == 4) {
+    seat_limit_modal.showModal();
+  }
   if (!selectedSeats.includes(seat) && selectedSeats.length < 4) {
     seat.classList.remove("bg-[#F7F8F8]");
     seat.classList.add("bg-[#1DD100]");
@@ -32,8 +35,8 @@ function selected(seat) {
     grand = document.getElementById("grand");
     grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
     if (noOfTakenSeats == 4) {
-      apply = document.getElementById("apply")
-      apply.classList.remove("btn-disabled")
+      apply = document.getElementById("apply");
+      apply.classList.remove("btn-disabled");
     }
     handleNextButton();
     console.log(selectedSeats.length);
@@ -68,6 +71,8 @@ function applyCoupon(apply) {
     grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
     couponContainer = document.getElementById("couponContainer");
     couponContainer.classList.add("hidden");
+  } else {
+    wrong_coupon_modal.showModal();
   }
 }
 
@@ -81,12 +86,10 @@ function handleNextButton() {
     phnNumber = document.getElementById("phnNumber");
     if (phnNumber.value) {
       next.classList.remove("btn-disabled");
-    }
-    else {
+    } else {
       next.classList.add("btn-disabled");
     }
-  }
-  else {
+  } else {
     next.classList.add("btn-disabled");
   }
 }

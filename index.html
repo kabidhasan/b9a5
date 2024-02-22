@@ -771,9 +771,85 @@
                 <button
                   class="bg-[#1DD100] text-white w-full h-16 my-6 text-center rounded-2xl font-extrabold text-xl btn btn-disabled"
                   id="next"
+                  onclick="success_modal.showModal()"
                 >
                   Next
                 </button>
+                <dialog id="success_modal" class="modal inter">
+                  <div
+                    class="modal-box flex flex-col justify-center items-center"
+                  >
+                    <img src="images/success.png" alt="" />
+                    <h3 class="font-bold text-lg text-center px-4 pt-4">
+                      Thank you for Booking Our Bus Seats. <br />
+                      We are working hard to find the best service and deals for
+                      you. <br />
+                    </h3>
+                    <div class="text-lg text-center pb-4">
+                      Shortly you will find a confirmation in your email.!
+                    </div>
+
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button
+                          class="btn bg-[#27AE60] text-white rounded-2xl px-6"
+                        >
+                          Continue
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+
+                <dialog id="wrong_coupon_modal" class="modal inter">
+                  <div
+                    class="modal-box flex flex-col justify-center items-center"
+                  >
+                    <img src="images/cross.png" alt="" class="w-1/2" />
+                    <h3 class="font-bold text-lg text-center px-4 pt-4">
+                      Sorry, Your Coupon Code Is Invalid! <br />
+                    </h3>
+                    <div class="text-lg text-center pb-4">
+                      Please, insert correct coupon code.
+                    </div>
+
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button
+                          class="btn bg-red-600 rounded-2xl px-6 text-white"
+                        >
+                          Try Again
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+                <dialog id="seat_limit_modal" class="modal inter">
+                  <div
+                    class="modal-box flex flex-col justify-center items-center"
+                  >
+                    <img src="images/cross.png" alt="" class="w-1/2" />
+                    <h3 class="font-bold text-lg text-center px-4 pt-4">
+                      Sorry, Your Allowed To Select 4 Seats At Most. <br />
+                    </h3>
+                    <div class="text-lg text-center pb-4">
+                      You have already booked 4 seats.
+                    </div>
+
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button
+                          class="btn bg-red-600 rounded-2xl px-6 text-white"
+                        >
+                          Try Again
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
                 <div
                   class="w-full flex justify-around underline inter text-[#03071299] mb-28"
                 >
