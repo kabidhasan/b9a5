@@ -61,12 +61,19 @@ apply.addEventListener("click", function () {
 
 function applyCoupon(apply) {
   coupon = document.getElementById("coupon");
+  discount = document.getElementById("discount");
+
   if (validCoupons.includes(coupon.value)) {
     if (coupon.value == "NEW15") {
       discountFactor = 0.85;
+      discount.innerText = (0.15 * noOfTakenSeats * 550).toFixed(2);
     } else {
       discountFactor = 0.8;
+      discount.innerText = (0.2 * noOfTakenSeats * 550).toFixed(2);
     }
+    discountPrice = document.getElementById("discount-price");
+    discountPrice.classList.remove("hidden");
+    discountPrice.classList.add("flex");
     grand = document.getElementById("grand");
     grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
     couponContainer = document.getElementById("couponContainer");
