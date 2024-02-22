@@ -91,9 +91,13 @@
                 work or embarking on a cross-country adventure, our fleet
                 ensures a smooth ride.
               </p>
-              <a href="#buy"><button class="btn bg-[#1DD100] font-bold border-0 text-xl px-5">
-                Buy Tickets
-              </button></a>
+              <a href="#buy"
+                ><button
+                  class="btn bg-[#1DD100] font-bold border-0 text-xl px-5"
+                >
+                  Buy Tickets
+                </button></a
+              >
             </div>
           </div>
         </div>
@@ -286,7 +290,6 @@
             </div>
           </div>
         </section>
-
         <section class="bg-white rounded-lg w-4/5 mx-auto">
           <div class="seat-selection-container flex justify-between">
             <div
@@ -663,11 +666,52 @@
               </div>
             </div>
 
-            <div class="seat-count w-1/2">
-              <div
-                class="seat-count-title w-full text-2xl font-semibold pt-8 pl-8 pb-6 border-dashed border-b-2"
-              >
-                Select Your Seat
+            <div class="seat-count w-5/12">
+              <div class="seat-count-container mx-8">
+                <div
+                  class="seat-count-title w-full text-2xl font-semibold pt-8 pb-6 border-dashed border-b-2"
+                >
+                  Select Your Seat
+                </div>
+                <div class="bg-[#F7F8F8] rounded-lg">
+                  <table class="w-full inter my-6 border-b-2">
+                    <thead class="">
+                      <tr
+                        class="flex flex-row justify-between font-medium px-8 py-8 w-full flex-grow"
+                      >
+                        <th class="w-full">
+                          Seats
+                          <span id="takenSeats" class="bg-[#1DD100] text-white px-2 rounded-lg">0</span>
+                        </th>
+                        <th class="w-full">Class</th>
+                        <th class="w-full">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                  <div
+                    class="total-price font-medium flex justify-between inter px-16 text-[#030712]"
+                  >
+                    <div class="">Total Price</div>
+                    <div>BDT <span id="total">0</span></div>
+                  </div>
+                  <label for="coupon" class="">
+                    <div class="bg-white rounded-lg h-14 flex justify-between my-6 mx-16">
+                      <input
+                        type="text"
+                        name="coupon"
+                        id="coupon"
+                        class=" w-4/5 h-full my-2 px-4
+                        " placeholder="Have Any Coupon?"
+                      />
+                      <button id="coupon-submit" class="h-full text-center m-2 bg-[#1DD100] text-white w-[80px] rounded-lg py-2 px-5" > Apply</button>
+                    </div>
+                    <div class="grand-total-price flex justify-between mx-16 inter text-[#030712] font-medium pb-8">
+                      <div>Grand Total</div>
+                      <div>BDT <span id="grand-total">0</span></div>
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>

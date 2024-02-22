@@ -11,6 +11,8 @@ function selected(seat) {
     selectedSeats.push(seat);
     remainingSeats = document.getElementById("remainingSeats");
     remainingSeats.innerText = `${40 - selectedSeats.length}`;
+    takenSeats = document.getElementById("takenSeats");
+    takenSeats.innerText = `${selectedSeats.length}`;
   }
   console.log(selectedSeats.length);
 }
