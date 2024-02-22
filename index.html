@@ -673,7 +673,7 @@
                 >
                   Select Your Seat
                 </div>
-                <div class="bg-[#F7F8F8] rounded-lg">
+                <div class="bg-[#F7F8F8] rounded-lg inter">
                   <table class="w-full inter my-6 border-b-2" id="seat-table">
                     <thead class="">
                       <tr
@@ -697,7 +697,10 @@
                     class="total-price font-medium flex justify-between inter px-8 text-[#030712]"
                   >
                     <div class="">Total Price</div>
-                    <div><span class="px-5">BDT</span> <span id="total" class="pr-4">0.00</span></div>
+                    <div>
+                      <span class="px-5">BDT</span>
+                      <span id="total" class="pr-4">0.00</span>
+                    </div>
                   </div>
                   <label for="coupon" id="couponContainer">
                     <div
@@ -722,8 +725,56 @@
                     class="grand-total-price flex justify-between mx-8 inter text-[#030712] font-medium pb-8 pt-4"
                   >
                     <div>Grand Total</div>
-                    <div><span class="px-5">BDT</span> <span id="grand" class="pr-4">0.00</span></div>
+                    <div>
+                      <span class="px-5">BDT</span>
+                      <span id="grand" class="pr-4">0.00</span>
+                    </div>
                   </div>
+                </div>
+                <label class="form-control w-full">
+                  <div class="label">
+                    <span class="label-text font-semibold inter mt-4"
+                      >Passenger Name *</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    class="input input-bordered w-full h-16 mt-4 inter"
+                  />
+                </label>
+                <label class="form-control w-full">
+                  <div class="label">
+                    <span class="label-text font-semibold inter mt-4"
+                      >Phone Number *</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your phone number"
+                    class="input input-bordered w-full h-16 mt-4 inter"
+                  />
+                </label>
+                <label class="form-control w-full">
+                  <div class="label">
+                    <span class="label-text font-semibold inter mt-4 inter"
+                      >Email ID</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your email id"
+                    class="input input-bordered w-full h-16 mt-4 inter"
+                  />
+                </label>
+                <button
+                  class="bg-[#1DD100] text-white w-full h-16 my-6 text-center rounded-2xl font-extrabold text-xl"
+                >
+                  Next
+                </button>
+                <div class="w-full flex justify-around underline inter text-[#03071299] mb-28">
+                  <a href="">Terms and Conditions</a>
+                  <a href="">Cancellation Policy</a>
                 </div>
               </div>
             </div>
