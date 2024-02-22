@@ -715,7 +715,7 @@
                       />
                       <button
                         id="apply"
-                        class="h-full text-center m-2 bg-[#1DD100] text-white w-[80px] rounded-lg py-2 px-5"
+                        class="h-full text-center m-2 bg-[#1DD100] text-white w-[80px] rounded-lg py-2 px-5 btn btn-disabled"
                       >
                         Apply
                       </button>
@@ -750,9 +750,10 @@
                     >
                   </div>
                   <input
-                    type="text"
+                    type="number"
                     placeholder="Enter your phone number"
                     class="input input-bordered w-full h-16 mt-4 inter"
+                    id="phnNumber"
                   />
                 </label>
                 <label class="form-control w-full">
@@ -762,17 +763,20 @@
                     >
                   </div>
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Enter your email id"
                     class="input input-bordered w-full h-16 mt-4 inter"
                   />
                 </label>
                 <button
-                  class="bg-[#1DD100] text-white w-full h-16 my-6 text-center rounded-2xl font-extrabold text-xl"
+                  class="bg-[#1DD100] text-white w-full h-16 my-6 text-center rounded-2xl font-extrabold text-xl btn btn-disabled"
+                  id="next"
                 >
                   Next
                 </button>
-                <div class="w-full flex justify-around underline inter text-[#03071299] mb-28">
+                <div
+                  class="w-full flex justify-around underline inter text-[#03071299] mb-28"
+                >
                   <a href="">Terms and Conditions</a>
                   <a href="">Cancellation Policy</a>
                 </div>

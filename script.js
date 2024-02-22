@@ -31,6 +31,11 @@ function selected(seat) {
     total.innerText = `${(550 * noOfTakenSeats).toFixed(2)}`;
     grand = document.getElementById("grand");
     grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
+    if (noOfTakenSeats == 4) {
+      apply = document.getElementById("apply")
+      apply.classList.remove("btn-disabled")
+    }
+    handleNextButton();
     console.log(selectedSeats.length);
   }
 }
@@ -61,7 +66,27 @@ function applyCoupon(apply) {
     }
     grand = document.getElementById("grand");
     grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
-    couponContainer = document.getElementById("couponContainer")
-    couponContainer.classList.add("hidden")
+    couponContainer = document.getElementById("couponContainer");
+    couponContainer.classList.add("hidden");
+  }
+}
+
+phnNumber = document.getElementById("phnNumber");
+phnNumber.addEventListener("input", function () {
+  handleNextButton();
+});
+next = document.getElementById("next");
+function handleNextButton() {
+  if (noOfTakenSeats > 0) {
+    phnNumber = document.getElementById("phnNumber");
+    if (phnNumber.value) {
+      next.classList.remove("btn-disabled");
+    }
+    else {
+      next.classList.add("btn-disabled");
+    }
+  }
+  else {
+    next.classList.add("btn-disabled");
   }
 }
