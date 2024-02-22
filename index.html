@@ -674,14 +674,18 @@
                   Select Your Seat
                 </div>
                 <div class="bg-[#F7F8F8] rounded-lg">
-                  <table class="w-full inter my-6 border-b-2">
+                  <table class="w-full inter my-6 border-b-2" id="seat-table">
                     <thead class="">
                       <tr
-                        class="flex flex-row justify-between font-medium px-8 py-8 w-full flex-grow"
+                        class="flex flex-row justify-between font-medium py-8 w-full flex-grow border-dashed border-b-2"
                       >
                         <th class="w-full">
                           Seats
-                          <span id="takenSeats" class="bg-[#1DD100] text-white px-2 rounded-lg">0</span>
+                          <span
+                            id="takenSeats"
+                            class="bg-[#1DD100] text-white px-2 rounded-lg"
+                            >0</span
+                          >
                         </th>
                         <th class="w-full">Class</th>
                         <th class="w-full">Price</th>
@@ -690,25 +694,34 @@
                     <tbody></tbody>
                   </table>
                   <div
-                    class="total-price font-medium flex justify-between inter px-16 text-[#030712]"
+                    class="total-price font-medium flex justify-between inter px-8 text-[#030712]"
                   >
                     <div class="">Total Price</div>
-                    <div>BDT <span id="total">0</span></div>
+                    <div>BDT <span id="total" class="px-4">0</span></div>
                   </div>
                   <label for="coupon" class="">
-                    <div class="bg-white rounded-lg h-14 flex justify-between my-6 mx-16">
+                    <div
+                      class="bg-white rounded-lg h-auto flex justify-between my-6 mx-8"
+                    >
                       <input
                         type="text"
                         name="coupon"
                         id="coupon"
-                        class=" w-4/5 h-full my-2 px-4
-                        " placeholder="Have Any Coupon?"
+                        class="w-4/5 h-full my-2 px-4 pt-2"
+                        placeholder="Have Any Coupon?"
                       />
-                      <button id="coupon-submit" class="h-full text-center m-2 bg-[#1DD100] text-white w-[80px] rounded-lg py-2 px-5" > Apply</button>
+                      <button
+                        id="coupon-submit"
+                        class="h-full text-center m-2 bg-[#1DD100] text-white w-[80px] rounded-lg py-2 px-5"
+                      >
+                        Apply
+                      </button>
                     </div>
-                    <div class="grand-total-price flex justify-between mx-16 inter text-[#030712] font-medium pb-8">
+                    <div
+                      class="grand-total-price flex justify-between mx-8 inter text-[#030712] font-medium pb-8"
+                    >
                       <div>Grand Total</div>
-                      <div>BDT <span id="grand-total">0</span></div>
+                      <div>BDT <span id="grand" class="px-4">0</span></div>
                     </div>
                   </label>
                 </div>
