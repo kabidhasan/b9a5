@@ -697,11 +697,11 @@
                     class="total-price font-medium flex justify-between inter px-8 text-[#030712]"
                   >
                     <div class="">Total Price</div>
-                    <div>BDT <span id="total" class="px-4">0</span></div>
+                    <div><span class="px-5">BDT</span> <span id="total" class="pr-4">0.00</span></div>
                   </div>
-                  <label for="coupon" class="">
+                  <label for="coupon" id="couponContainer">
                     <div
-                      class="bg-white rounded-lg h-auto flex justify-between my-6 mx-8"
+                      class="bg-white rounded-lg h-auto flex justify-between mt-6 mx-8 items-center"
                     >
                       <input
                         type="text"
@@ -711,19 +711,19 @@
                         placeholder="Have Any Coupon?"
                       />
                       <button
-                        id="coupon-submit"
+                        id="apply"
                         class="h-full text-center m-2 bg-[#1DD100] text-white w-[80px] rounded-lg py-2 px-5"
                       >
                         Apply
                       </button>
                     </div>
-                    <div
-                      class="grand-total-price flex justify-between mx-8 inter text-[#030712] font-medium pb-8"
-                    >
-                      <div>Grand Total</div>
-                      <div>BDT <span id="grand" class="px-4">0</span></div>
-                    </div>
                   </label>
+                  <div
+                    class="grand-total-price flex justify-between mx-8 inter text-[#030712] font-medium pb-8 pt-4"
+                  >
+                    <div>Grand Total</div>
+                    <div><span class="px-5">BDT</span> <span id="grand" class="pr-4">0.00</span></div>
+                  </div>
                 </div>
               </div>
             </div>

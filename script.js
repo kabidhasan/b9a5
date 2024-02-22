@@ -1,7 +1,9 @@
 let a1 = document.getElementById("a1");
 console.log(a1);
 let selectedSeats = [];
-let discountFactor = 1
+let noOfTakenSeats = 0;
+validCoupons = ["NEW15", "Couple 20"];
+let discountFactor = 1;
 function selected(seat) {
   if (!selectedSeats.includes(seat) && selectedSeats.length < 4) {
     seat.classList.remove("bg-[#F7F8F8]");
@@ -9,7 +11,7 @@ function selected(seat) {
     seat.classList.remove("text-[#03071280]");
     seat.classList.add("text-white");
     selectedSeats.push(seat);
-    noOfTakenSeats = selectedSeats.length
+    noOfTakenSeats = selectedSeats.length;
     remainingSeats = document.getElementById("remainingSeats");
     remainingSeats.innerText = `${40 - noOfTakenSeats}`;
     takenSeats = document.getElementById("takenSeats");
@@ -23,12 +25,12 @@ function selected(seat) {
     newRow.classList.add("px-8");
     newRow.classList.add("py-4");
     newRow.classList.add("flex-grow");
-    newRow.innerHTML = `<tc class='pl-2'>${seatNo}</tc><tc class='pl-8'>Economy</tc><tc class='pr-4'>550</tc>`;
+    newRow.innerHTML = `<tc class='pl-2'>${seatNo}</tc><tc class='pl-8'>Economy</tc><tc class='pr-4'>550.00</tc>`;
     seatTable.append(newRow);
-    total= document.getElementById("total")
-    total.innerText = `${550 * noOfTakenSeats}`
-    grand = document.getElementById("grand")
-    grand.innerText =`${discountFactor * 550 * noOfTakenSeats}`
+    total = document.getElementById("total");
+    total.innerText = `${(550 * noOfTakenSeats).toFixed(2)}`;
+    grand = document.getElementById("grand");
+    grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
     console.log(selectedSeats.length);
   }
 }
@@ -41,5 +43,25 @@ for (char = 97; char <= 106; char += 1) {
     seat.addEventListener("click", function () {
       selected(this);
     });
+  }
+}
+
+apply = document.getElementById("apply");
+apply.addEventListener("click", function () {
+  applyCoupon(apply);
+});
+
+function applyCoupon(apply) {
+  coupon = document.getElementById("coupon");
+  if (validCoupons.includes(coupon.value)) {
+    if (coupon.value == "NEW15") {
+      discountFactor = 0.85;
+    } else {
+      discountFactor = 0.8;
+    }
+    grand = document.getElementById("grand");
+    grand.innerText = `${(discountFactor * 550 * noOfTakenSeats).toFixed(2)}`;
+    couponContainer = document.getElementById("couponContainer")
+    couponContainer.classList.add("hidden")
   }
 }
